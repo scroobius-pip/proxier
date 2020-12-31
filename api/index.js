@@ -1,6 +1,6 @@
 const fetch = require('../lib/request')
 
-function log (message, data) {
+function log(message, data) {
   console.log({
     message,
     data,
@@ -40,9 +40,9 @@ const parseAnyReqBody = req =>
 
 const allowCors = fn => async (req, res) => {
   res.setHeader('Access-Control-Allow-Credentials', true)
-  res.setHeader('Access-Control-Allow-Origin', '*')
+  // res.setHeader('Access-Control-Allow-Origin', '*')
   // another common pattern
-  // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+  res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
   res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
   res.setHeader(
     'Access-Control-Allow-Headers',
@@ -78,7 +78,7 @@ const handler = async (req, res) => {
   }
 
   const finalUrl = `${urlWithSlashes}?${reqParamsUrl}`
-  
+
   const options = {
     url: finalUrl,
     method: req.method,
