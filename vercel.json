@@ -27,16 +27,14 @@
       ],
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Headers": "*"
+        "Access-Control-Allow-Methods": "*"
       }
     },
     {
       "src": "/(.*)",
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*",
-        "Access-Control-Allow-Headers": "*"
+        "Access-Control-Allow-Methods": "*"
       },
       "dest": "/api?url=$1"
     }
