@@ -10,6 +10,11 @@
       "methods": [
         "OPTIONS"
       ],
+      "headers": {
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": "*"
+      },
       "dest": "/api/200.js"
     },
     {
@@ -19,10 +24,20 @@
         "GET",
         "PUT",
         "PATCH"
-      ]
+      ],
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers": "*"
+      }
     },
     {
       "src": "/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Headers": "*"
+      },
       "dest": "/api?url=$1"
     }
   ]
