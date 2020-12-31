@@ -12,7 +12,7 @@
       ],
       "headers": {
         "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
         "Access-Control-Allow-Origin": "*"
       },
       "dest": "/api/200.js"
@@ -27,14 +27,14 @@
       ],
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*"
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
       }
     },
     {
       "src": "/(.*)",
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "*"
+        "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
       },
       "dest": "/api?url=$1"
     }
